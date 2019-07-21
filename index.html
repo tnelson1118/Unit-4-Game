@@ -19,54 +19,59 @@
 
 <body>
 
-    <div id="heading">Crystals Collector Game!</div>
+    <div id="content">
 
-    <div id="instructions">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-            total score.</p>
-        <p>You win the game by matching your total score to random number, you lose the game if your total score goes
-            above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal.</p>
-    </div>
+        <div id="top-box">
+            <div id="heading">Crystals Collector Game!</div>
 
-    <br>
+            <br>
 
-    <div id="random-number"></div>
-
-    <div id="score-card">
-        <div id="wins"></div>
-        <div id="losses"></div>
-    </div>
-
-    <br>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1">
-                <div id="gem1"></div><img src="assets/images/red-gem.jpg" alt="Red Gem">
+            <div id="instructions">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+                    total score.</p>
+                <p>You win the game by matching your total score to random number, you lose the game if your total score
+                    goes
+                    above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
             </div>
         </div>
-        <div class="col-md-1">
-            <div id="gem2"><img src="assets/images/blue-gem.jpe" alt="Blue Gem"></div>
+
+        <br>
+
+        <div id="middle-box">
+            <div id="random-number">Random Number: </div>
+
+            <div id="score-card">
+                <div id="wins">Wins: </div>
+                <div id="losses">Losses: </div>
+            </div>
         </div>
-        <div class="col-md-1">
-            <div id="gem3"><img src="assets/images/yellow-gem.jpe" alt="Yellow Gem"></div>
+
+        <br>
+
+        <div id="container">
+        
+            <button type="button" class="btn"><img src="assets/images/red-gem.jpg" id="red-gem" class="gem" alt="Red Gem"></button>
+            <button type="button" class="btn"><img src="assets/images/blue-gem.jpe" id="blue-gem" class="gem" alt="Blue Gem"></button>
+            <button type="button" class="btn"><img src="assets/images/yellow-gem.jpe" id="yellow-gem" class="gem" alt="Yellow Gem"></button>
+            <button type="button" class="btn"><img src="assets/images/green-gem.jpg" id="green-gem" class="gem" alt="Green Gem"></button>
+    
         </div>
-        <div class="col-md-1">
-            <div id="gem4"><img src="assets/images/green-gem.jpg" alt="Green Gem"></div>
+
+
+
+        <br>
+
+        <div id="bottom-box">
+            <div id="total-score">Total Score: </div>
+
+            <br>
+
+            <div id="gem-points">Gem Value: </div>
         </div>
-    </div>
-    </div>
-
-    <br>
-
-    <div id="total-score"></div>
-
-    <br>
-
-    <div id="gem-points"></div>
+    </div>  
 
 
 </body>
