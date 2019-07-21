@@ -1,7 +1,16 @@
 $(document).ready(function() {
-    /* define generic variables.
+    // define generic variables.
+    var wins = 0;
+    var losses = 0;
+    var totalScore = 0;
+    var randomNumber = 0;
+    var redGemValue = 0;
+    var blueGemValue = 0;
+    var yellowGemValue = 0;
+    var greenGemValue = 0;
     
-    1. function to generate a random number between 19 - 120 and reset users score and score counter.
+    
+    /* 1. function to generate a random number between 19 - 120 and reset users score and score counter.
     assign new values to each crystal button between 1-12 which will be
     hidden from the user 
     until they click it.
