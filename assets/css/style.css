@@ -36,6 +36,10 @@ body {
     margin-right: 5px;
 }
 
+.gem:hover {
+    opacity: 0.5;
+}
+
 #bottom-box {
     clear: both;
     padding-left: 2%;
