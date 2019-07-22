@@ -1,5 +1,13 @@
+
+body {
+    background-image: url("../images/background.jpeg");
+    color: red;
+}
+
 #content {
-    background-color: brown;
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    border: 5px double red;
     width: 60%;
     margin-top: 6%;
     margin-right: auto;
@@ -7,7 +15,6 @@
 }
 
 #heading {
-    background-color: blue;
     text-align: center;
     padding: 2%;
     font-size: 40px;
