@@ -4,7 +4,6 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
     var randomNumber = 0;
-    var gemValue = 0;
     var totalScore = 0;
     var gameStart = false;
 
@@ -54,5 +53,117 @@ $(document).ready(function() {
 
 
     };
+
+    // a function for what happens when the user wins or loses.
+    function outCome() {
+        if (totalScore === randomNumber) {
+            wins++;
+            gameStart = false;
+            totalScore = 0;
+            $("#wins").text("Wins: " + wins);
+            $("#random-number").text("WINNER");
+            console.log("Total score: " + totalScore);
+        };
+
+        if (totalScore > randomNumber) {
+            losses++;
+            gameStart = false;
+            totalScore = 0;
+            $("#losses").text("Losses: " + losses);
+            $("#random-number").text("LOSER");
+            console.log("Total score: " + totalScore);
+        };
+
+        $("#total-score").text("Total Score: " + totalScore);
+    };
+
+    // the "on click" functions the 4 different gem buttons on the page.
+    $("#red-gem").on("click", function() {
+        
+        if (gameStart === false) {
+            // if the game is set to false, a click on any button will swtich it to true and set the values.
+            gameStart = true;
+            setValues();
+
+            // then add the value of the button to total score and check the outcome.
+            totalScore += gem.redGem.value;
+            outCome();
+
+        }
+
+        // else the game has already been started there is no need to set new values or switching the game to game start to true.
+        // then check outcome again to see if the game is over.
+        else {
+            totalScore += gem.redGem.value;
+            outCome();
+
+        };
+
+        $("#gem-points").text("Gem Value: " + gem.redGem.value);
+
+
+    });
+
+    // now we can just make 3 more of the exact same on click function for each button.
+
+    $("#blue-gem").on("click", function() {
+
+        if (gameStart === false) {
+
+            gameStart = true;
+            setValues();
+
+            totalScore += gem.blueGem.value;
+            outCome();
+        }
+
+        else {
+            totalScore += gem.blueGem.value;
+            outCome();
+        };
+
+        $("#gem-points").text("Gem Value: " + gem.blueGem.value);
+
+    });
+
+    $("#yellow-gem").on("click", function() {
+
+        if (gameStart === false) {
+
+            gameStart = true;
+            setValues();
+
+            totalScore += gem.yellowGem.value;
+            outCome();
+        }
+
+        else {
+            totalScore += gem.yellowGem.value;
+            outCome();
+        };
+
+        $("#gem-points").text("Gem Value: " + gem.yellowGem.value);
+
+    });
+
+    $("#green-gem").on("click", function() {
+
+        if (gameStart === false) {
+
+            gameStart = true;
+            setValues();
+
+            totalScore += gem.greenGem.value;
+            outCome();
+        }
+
+        else {
+            totalScore += gem.greenGem.value;
+            outCome();
+        };
+
+        $("#gem-points").text("Gem Value: " + gem.greenGem.value);
+
+    });
 
 });
