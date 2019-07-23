@@ -9,18 +9,10 @@ $(document).ready(function() {
 
     // variable to hold values for each gem.
     var gem = {
-        redGem: {
-            value: 0
-        },
-        blueGem: {
-            value: 0
-        },
-        yellowGem: {
-            value: 0
-        },
-        greenGem: {
-            value: 0
-        },
+        redGem: 0,
+        blueGem: 0,
+        yellowGem: 0,
+        greenGem: 0,
     }
     
     
@@ -33,16 +25,16 @@ $(document).ready(function() {
     // function that sets gem values and the random number.
     function setValues() {
         // assigning a random value between 1 and 12 to each color gem value.
-        gem.redGem.value = createRandomNumbers(1, 12);
-        gem.blueGem.value = createRandomNumbers(1, 12);
-        gem.yellowGem.value = createRandomNumbers(1, 12);
-        gem.greenGem.value = createRandomNumbers(1, 12);
+        gem.redGem = createRandomNumbers(1, 12);
+        gem.blueGem = createRandomNumbers(1, 12);
+        gem.yellowGem = createRandomNumbers(1, 12);
+        gem.greenGem = createRandomNumbers(1, 12);
 
         //console.log the values for trouble shooting purposes.
-        console.log("Red gem value: " + gem.redGem.value);
-        console.log("Blue gem value: " + gem.blueGem.value);
-        console.log("Yellow gem value: " + gem.yellowGem.value);
-        console.log("Green gem value: " + gem.greenGem.value);
+        console.log("Red gem value: " + gem.redGem);
+        console.log("Blue gem value: " + gem.blueGem);
+        console.log("Yellow gem value: " + gem.yellowGem);
+        console.log("Green gem value: " + gem.greenGem);
 
         // assinging a random number between 19 and 120 to the random number variable.
         randomNumber = createRandomNumbers(19, 120);
@@ -86,7 +78,7 @@ $(document).ready(function() {
             setValues();
 
             // then add the value of the button to total score and check the outcome.
-            totalScore += gem.redGem.value;
+            totalScore += gem.redGem;
             outCome();
 
         }
@@ -94,12 +86,12 @@ $(document).ready(function() {
         // else the game has already been started there is no need to set new values or switching the game to game start to true.
         // then check outcome again to see if the game is over.
         else {
-            totalScore += gem.redGem.value;
+            totalScore += gem.redGem;
             outCome();
 
         };
 
-        $("#gem-points").text("Gem Value: " + gem.redGem.value);
+        $("#gem-points").text("Gem Value: " + gem.redGem);
 
 
     });
@@ -113,16 +105,16 @@ $(document).ready(function() {
             gameStart = true;
             setValues();
 
-            totalScore += gem.blueGem.value;
+            totalScore += gem.blueGem;
             outCome();
         }
 
         else {
-            totalScore += gem.blueGem.value;
+            totalScore += gem.blueGem;
             outCome();
         };
 
-        $("#gem-points").text("Gem Value: " + gem.blueGem.value);
+        $("#gem-points").text("Gem Value: " + gem.blueGem);
 
     });
 
@@ -133,16 +125,16 @@ $(document).ready(function() {
             gameStart = true;
             setValues();
 
-            totalScore += gem.yellowGem.value;
+            totalScore += gem.yellowGem;
             outCome();
         }
 
         else {
-            totalScore += gem.yellowGem.value;
+            totalScore += gem.yellowGem;
             outCome();
         };
 
-        $("#gem-points").text("Gem Value: " + gem.yellowGem.value);
+        $("#gem-points").text("Gem Value: " + gem.yellowGem);
 
     });
 
@@ -153,16 +145,16 @@ $(document).ready(function() {
             gameStart = true;
             setValues();
 
-            totalScore += gem.greenGem.value;
+            totalScore += gem.greenGem;
             outCome();
         }
 
         else {
-            totalScore += gem.greenGem.value;
+            totalScore += gem.greenGem;
             outCome();
         };
 
-        $("#gem-points").text("Gem Value: " + gem.greenGem.value);
+        $("#gem-points").text("Gem Value: " + gem.greenGem);
 
     });
 
