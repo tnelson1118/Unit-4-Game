@@ -32,7 +32,6 @@ body {
 .gem {
     height: 100px;
     width: 100px;
-    margin-right: 5px;
 }
 
 #gem-red {
@@ -41,14 +40,17 @@ body {
 
 #gem-blue {
     float: left;
+    margin-left: 75px;
 }
 
 #gem-yellow {
     float: left;
+    margin-left: 75px;
 }
 
 #gem-green {
     float: left;
+    margin-left: 75px;
 }
 
 .gem:hover {
