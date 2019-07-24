@@ -49,8 +49,8 @@ $(document).ready(function() {
     // a function for what happens when the user wins or loses.
     function outCome() {
         if (totalScore === randomNumber) {
-            wins++;
             gameStart = false;
+            wins++;
             totalScore = 0;
             $("#wins").text("Wins: " + wins);
             $("#random-number").text("WINNER");
@@ -58,8 +58,8 @@ $(document).ready(function() {
         };
 
         if (totalScore > randomNumber) {
-            losses++;
             gameStart = false;
+            losses++;
             totalScore = 0;
             $("#losses").text("Losses: " + losses);
             $("#random-number").text("LOSER");
